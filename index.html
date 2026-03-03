@@ -2,7 +2,7 @@
 <html>
 
 
-
+<!-- Meta info shit -->
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +14,18 @@
 
     <link href="/styles.css" rel="stylesheet" type="text/css" media="all">
   </head>
-
+<!-- Meta info shit over -->
 
 
 
 <!-- The main body text of the website -->
 <body>
 
+<!-- The window at the center of the screen -->
+<main class="page">
 
-<div class="window">
+<!-- Intro window in page -->
+<section class="window">
     <h1>welcome to the stinkle spacecast!</h1>
     <p>i like skating, listening to music, reading, and other amazing hobbies!</p>
 
@@ -30,10 +33,51 @@
     <img src="images/thrasher_logo.jpg" class="uniform-square">
     <img src="images/suicideboys_1.webp" class="uniform-square">
     <img src="images/a_walk_across_america.jpg" class="uniform-square">
-</div>
+</section>
+<!-- End of intro window -->
 
+<!-- Music window in page -->
+<section class="window window--playlist">
+
+<header class="window-header">
+        <h2>top tracks</h2>
+        <p class="subtext">click a track. (embeds later.)</p>
+      </header>
+
+      <div class="playlist">
+        <ol class="tracklist">
+          <li><a href="#" data-track="1">Track Name 1</a></li>
+          <li><a href="#" data-track="2">Track Name 2</a></li>
+          <li><a href="#" data-track="3">Track Name 3</a></li>
+          <li><a href="#" data-track="4">Track Name 4</a></li>
+        </ol>
+
+        <div class="player">
+          <div class="player-placeholder">
+            Player area (put Spotify/SoundCloud iframe here)
+          </div>
+        </div>
+      </div>
+
+</section>
+<!-- End of music window -->
+
+</main>
+
+}
+<!-- JSS music player logic -->
+<script>
+  document.querySelectorAll(".tracklist a").forEach(a => {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.querySelector(".player-placeholder").textContent =
+        "Selected: " + a.textContent + " (swap in embed here)";
+    });
+  });
+</script>
 
 </body>
+<!-- End of main body text of the website -->
 
 
 
