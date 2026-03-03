@@ -3,12 +3,23 @@
    "how to change link color." */
 
 body {
-  background-color: white;
+  background-image: url("images/sb_wallpaper_background.webp");
+  background-size: 300px;
   color: black;
   font-family: Verdana;
 }
+
 .uniform-square {
     width: 200px;
     height: 200px;
     object-fit: cover;
+}
+
+.window {
+  background-color: white;      
+  width: 600px;                 
+  margin: 50px auto;          
+  padding: 30px;                
+  text-align: center;         
+  border: 3px solid black;
 }
