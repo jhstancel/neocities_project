@@ -1,89 +1,55 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
+/* =========================================
+   STINKLE SPACECAST STYLESHEET INDEX
+   -----------------------------------------
+   This file only imports the actual CSS files.
+   Each file below handles a different layer
+   of the site's styling so things stay organized.
+   ========================================= */
 
-body {
-  background-image: url("images/sb_wallpaper_background.webp");
-  background-size: 300px;
-  color: black;
-  font-family: Verdana;
-}
 
-.uniform-square {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
+/* -----------------------------------------
+   BASE STYLES
+   Global defaults for the entire site.
 
-.window {
-  width: 600px;                 
-  margin: 50px auto;          
-  padding: 30px;                
-  text-align: center;         
-  border: 4px ridge gray;
-  background-color: #f4f4f4;
-}
+   Includes:
+   - body styling
+   - global fonts
+   - background image
+   - base colors
 
-.page {
-  width: min(720px, 92vw);
-  margin: 48px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
+   These rules affect the whole document.
+----------------------------------------- */
+@import url("styles/base.css");
 
-.window-header {
-  border-bottom: 2px solid black;
-  padding-bottom: 12px;
-  margin-bottom: 16px;
-}
 
-.subtext {
-  margin: 6px 0 0;
-  font-size: 0.9rem;
-}
+/* -----------------------------------------
+   LAYOUT
+   Structural layout for the page.
 
-.img-row {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
+   Includes:
+   - page width and centering
+   - window containers
+   - headers inside windows
+   - layout grids and flex structures
 
-.playlist {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  text-align: left;
-}
+   This controls how sections are positioned
+   on the page.
+----------------------------------------- */
+@import url("styles/layout.css");
 
-.tracklist {
-  margin: 0;
-  padding-left: 18px;
-}
 
-.tracklist a {
-  color: black;
-  text-decoration: none;
-}
+/* -----------------------------------------
+   COMPONENTS
+   Reusable UI elements.
 
-.tracklist a:hover {
-  text-decoration: underline;
-}
+   Includes:
+   - square image styling
+   - playlist styling
+   - tracklist links
+   - music player placeholder
+   - album cover display
 
-.player-placeholder {
-  border: 2px dashed black;
-  padding: 16px;
-  min-height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.player .cover {
-  width: 220px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 16px;
-  border: 2px solid black;
-}
+   These are small reusable pieces used
+   inside the layout.
+----------------------------------------- */
+@import url("styles/components.css");
