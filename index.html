@@ -2,41 +2,59 @@
 <html>
 
 
-<!-- Meta info shit -->
+<!----- Meta info shit ----->
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The web site of stinkle-spacecast</title>
 
-    <!-- The style.css file allows you to change the look of your web pages.
-         If you include the next line in all your web pages, they will all share the same look.
-         This makes it easier to make new pages for your site. -->
-
     <link href="/styles.css" rel="stylesheet" type="text/css" media="all">
   </head>
-<!-- Meta info shit over -->
+<!----- Meta info shit over ----->
 
 
 
-<!-- The main body text of the website -->
+
+
+<!---------- The main body text of the website ---------->
 <body>
 
-<!-- The window at the center of the screen -->
+
+
+
+
+
+
+
+
+
+<!------ The window at the center of the screen ------>
 <main class="page">
 
-<!-- Intro window in page -->
+
+
+<!------------- Intro window in page ------------>
 <section class="window">
     <h1>welcome to the stinkle spacecast!</h1>
     <p>i like skating, listening to music, reading, and other amazing hobbies!</p>
 
-<!-- Images -->
+<!----------------- Images ----------------->
     <img src="images/thrasher_logo.jpg" class="uniform-square">
     <img src="images/suicideboys_1.webp" class="uniform-square">
     <img src="images/a_walk_across_america.jpg" class="uniform-square">
-</section>
-<!-- End of intro window -->
 
-<!-- Music window in page -->
+</section>
+<!------------- End of Images -------------->
+
+
+
+<!--------- End of intro window in page --------->
+
+
+
+
+
+<!------------ Music window in page ------------>
 <section class="window window--playlist">
 
 <header class="window-header">
@@ -45,35 +63,68 @@
       </header>
 
       <div class="playlist">
-        <ol class="tracklist">
-          <li><a href="#" data-track="1">i no longer fear the razor guarding my heel iv</a></li>
-          <li><a href="#" data-track="2">clouds as witnesses</a></li>
-          <li><a href="#" data-track="3">i really want to stay at your house</a></li>
-        </ol>
 
-        <div class="player">
-          <div class="player-placeholder">
-            Player area (put Spotify/SoundCloud iframe here)
-          </div>
-        </div>
+<!-------- Tracklist of songs I dig -------->
+<ol class="tracklist">
+  <li>
+    <button class="track"
+      data-title="Clouds as Witnesses"
+      data-cover="images/covers/gray_grey_cover.jpg"
+      data-embed="https://open.spotify.com/embed/track/00CutyaH2ljgLtM0nM5LLd">
+      Clouds as Witnesses
+    </button>
+  </li>
+<p> 
+</p>
+  <li>
+    <button class="track"
+      data-title="CLYDE (I Hope At Least One of My Ex-Girlfriends Hears This)"
+      data-cover="images/covers/gray_grey_cover.jpg"
+      data-embed="https://open.spotify.com/embed/track/59aL2q2UPYJkgLTSv0WTlB">
+      CLYDE (I Hope At Least One of My Ex-Girlfriends Hears This)
+    </button>
+  </li>
+<p>
+</p>
+  <li>
+    <button class="track"
+      data-title="I Really Want to Stay at Your House"
+      data-cover="images/covers/cyberpunk_radio_vol2_cover.jpg"
+      data-embed="https://open.spotify.com/embed/track/7mykoq6R3BArsSpNDjFQTm">
+      I Really Want to Stay at Your House
+    </button>
+  </li>
+<p> 
+</p>
+</ol>
+<!----- End of tracklist of songs I dig ----->
+
+<!-------------- Music player --------------->
+<div class="player">
+  <img class="cover" src="images/covers/clouds.jpg" alt="Album cover">
+<iframe
+  class="spotify-player"
+  src="https://open.spotify.com/embed/track/00CutyaH2ljgLtM0nM5LLd"
+  width="0"
+  height="0"
+  style="position:absolute; opacity:0; pointer-events:none;"
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>  
+</div>
+<!---------- End of music player ------------>
       </div>
 
 </section>
-<!-- End of music window -->
+<!-------- End of music window in page --------->
+
+
+
+
 
 </main>
 
-}
-<!-- JSS music player logic -->
-<script>
-  document.querySelectorAll(".tracklist a").forEach(a => {
-    a.addEventListener("click", (e) => {
-      e.preventDefault();
-      document.querySelector(".player-placeholder").textContent =
-        "Selected: " + a.textContent + " (swap in embed here)";
-    });
-  });
-</script>
+<!-------- Music player -------->
+<script src="js/music_player.js"></script>
 
 </body>
 <!-- End of main body text of the website -->
